@@ -1,0 +1,24 @@
+{
+  "name": "component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://justingeeslin@github.com/justingeeslin/component.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justingeeslin/component/issues"
+  },
+  "homepage": "https://github.com/justingeeslin/component#readme",
+  "devDependencies": {
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
+  }
+}
