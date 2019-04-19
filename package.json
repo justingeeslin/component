@@ -20,6 +20,7 @@
   "devDependencies": {
     "browserify": "^14.5.0",
     "browserify-istanbul": "^2.0.0",
+    "codacy-coverage": "^3.4.0",
     "istanbul": "^0.4.5",
     "jasmine": "^2.99.0",
     "jasmine-core": "^2.99.1",
