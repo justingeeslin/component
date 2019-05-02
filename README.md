@@ -1,0 +1,2 @@
+# component
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/020010dc9b8f4cb3a8abf1b313c940a4)](https://app.codacy.com/app/justingeeslin/component?utm_source=github.com&utm_medium=referral&utm_content=justingeeslin/component&utm_campaign=Badge_Grade_Dashboard)
