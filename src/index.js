@@ -45,9 +45,6 @@ var Component = function (options) {
 
 	$.extend(this, defaults, options);
 
-	// The profiling attribute. There is a listener for a node insertion with this profile.
-	this.el.attr('sensible-component', true);
-
 	// Extend does not trigger custom setters and getters. There are some properties that if defined on init the custom setter/getter is not called. make the assigment manually for these sensitive properties.
 	if (options && options.state) {
 		this.state = options.state
