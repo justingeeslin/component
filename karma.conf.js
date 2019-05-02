@@ -136,8 +136,4 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity
   })
-
-	if (process.env.TRAVIS || process.env.CIRCLECI) {
-		config.browsers = ['Chrome_travis_ci'];
-	}
 }
