@@ -37,9 +37,9 @@ module.exports = function(config) {
 
     browserify: {
         debug: true,
-        // transform: [
-        //   istanbul({})
-        // ]
+        transform: [
+          istanbul({})
+        ]
     },
 
     // test results reporter to use
@@ -47,8 +47,8 @@ module.exports = function(config) {
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: [
       'progress',
-      'coverage'
-      // 'html'
+      'coverage',
+      'html'
     ],
 
     coverageReporter : {
