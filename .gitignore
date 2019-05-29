@@ -1,2 +1,6 @@
 /node_modules
 /local.log
+/browserstack.err
+/coverage
+/tests/index.html
+/results
