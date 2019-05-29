@@ -1,5 +1,7 @@
 # component
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/020010dc9b8f4cb3a8abf1b313c940a4)](https://app.codacy.com/app/justingeeslin/component?utm_source=github.com&utm_medium=referral&utm_content=justingeeslin/component&utm_campaign=Badge_Grade_Dashboard) [![Greenkeeper badge](https://badges.greenkeeper.io/justingeeslin/component.svg)](https://greenkeeper.io/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/020010dc9b8f4cb3a8abf1b313c940a4)](https://app.codacy.com/app/justingeeslin/component?utm_source=github.com&utm_medium=referral&utm_content=justingeeslin/component&utm_campaign=Badge_Grade_Dashboard) 
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/44aeb9fcace04fcb9c2ad5445d25bedf)](https://www.codacy.com/app/justingeeslin/component?utm_source=github.com&utm_medium=referral&utm_content=justingeeslin/component&utm_campaign=Badge_Coverage)
+[![Greenkeeper badge](https://badges.greenkeeper.io/justingeeslin/component.svg)](https://greenkeeper.io/)
 
 A base component for UI components. 
 
