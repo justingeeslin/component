@@ -4,14 +4,14 @@ var Component = function (options) {
 
 	// Use the private members for custom hidden setters and getters.
 	// An identifier for the component's current state.
-	var state = '';
+	var state = "";
 
 	var defaults = {
 		el : $(document.createDocumentFragment()),
 		// To log or not to log..
 		debug: false,
 		stateChange : function(oldState, newState) {
-			self.log('Changing state from ' + oldState + ' to ' + newState);
+			self.log("Changing state from " + oldState + " to " + newState);
 		},
 		preload: function() { },
 		postload: function() { },
@@ -22,7 +22,7 @@ var Component = function (options) {
 			self.target.empty();
 		},
 		// To avoid collisions and incase you want to namespace individual components
-		eventNamespace: 'sensible',
+		eventNamespace: "sensible",
 	};
 
 	this.log = function(msg) {
@@ -31,7 +31,7 @@ var Component = function (options) {
 		}
 	}
 
-	Object.defineProperty(this, 'state', {
+	Object.defineProperty(this, "state", {
 		get: function() { return state; },
 		set: function(newState) {
 			var oldState = state;
@@ -47,7 +47,7 @@ var Component = function (options) {
 
 	// Extend does not trigger custom setters and getters. There are some properties that if defined on init the custom setter/getter is not called. make the assigment manually for these sensitive properties.
 	if (options && options.state) {
-		this.state = options.state
+		this.state = options.state;
 	}
 
 	// Watch an attribute for change
@@ -62,23 +62,23 @@ var Component = function (options) {
 		};
 
 		var actionOnChange = function(attr, newValue) {
-			console.log('The ' + attr + ' attribute was modified to ', newValue);
+			console.log("The " + attr + " attribute was modified to ", newValue);
 			cb(newValue);
 		}
 
 		if (typeof MutationObserver !== "undefined") {
 			// Callback function to execute when mutations are observed
 			var callback = function(mutationsList) {
-				console.log('Attribute Modified!')
+				console.log("Attribute Modified!");
 			    for(var i in mutationsList) {
 						var mutation = mutationsList[i];
-			        if (mutation.type == 'attributes') {
-								if (mutation.attributeName == attr) {
-									var newValue = self.el.attr(attr);
-									actionOnChange(attr, newValue);
-								}
-			        }
-			    }
+		        if (mutation.type == "attributes") {
+							if (mutation.attributeName === attr) {
+								var newValue = self.el.attr(attr);
+								actionOnChange(attr, newValue);
+							}
+		        }
+	    		}
 			};
 			// Create an observer instance linked to the callback function
 			var observer = new MutationObserver(callback);
@@ -87,22 +87,22 @@ var Component = function (options) {
 		}
 		else {
 			var callback = function(event) {
-				console.log('Attribute Modified IE10 style');
-				if ('attrChange' in event) {
+				console.log("Attribute Modified IE10 style");
+				if ("attrChange" in event) {
 					if (event.attrName == attr) {
 						actionOnChange(event.attrName, event.newValue);
 					}
 				}
-			}
-			console.log('Listening for attribute modified')
-			self.el[0].addEventListener('DOMAttrModified', callback, false);
+			};
+			console.log("Listening for attribute modified")
+			self.el[0].addEventListener("DOMAttrModified", callback, false);
 		}
 
 	}
 
 	// Wrapper for handling class changes.
 	this.onClassChange = function(cb) {
-		this.onAttributeChange('class', cb)
+		this.onAttributeChange("class", cb)
 
 	}
 
