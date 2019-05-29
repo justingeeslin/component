@@ -2,3 +2,4 @@
 /local.log
 /browserstack.err
 /coverage
+/tests/index.html
