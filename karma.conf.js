@@ -48,7 +48,8 @@ module.exports = function(config) {
     reporters: [
       'progress',
       'coverage',
-      'html'
+      'html',
+      'junit'
     ],
 
     coverageReporter : {
@@ -72,6 +73,10 @@ module.exports = function(config) {
       groupSuites: true,
       useCompactStyle: true
       // useLegacyStyle: true
+    },
+
+    junitReporter: {
+      outputDir: 'results'
     },
 
     // web server port
@@ -124,7 +129,7 @@ module.exports = function(config) {
       'edge',
       'IE11',
       // 'Safari',
-      'Chrome',
+      // 'Chrome',
       'firefox_win'
     ],
 
