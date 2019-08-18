@@ -37,6 +37,6 @@
     "karma-safari-launcher": "^1.0.0",
     "watchify": "^3.11.1",
     "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "^3.3.7"
   }
 }
